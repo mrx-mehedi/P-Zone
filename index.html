@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Key Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2D033B;
+      color: #FFFFFF;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .login-box {
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #FF0000;
+      border-radius: 10px;
+      width: 300px;
+      background: #191919;
+    }
+    .input-field {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #FF0000;
+      border-radius: 5px;
+    }
+    .login-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #FF0000;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .login-btn:hover {
+      background-color: #FF0000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Enter Private Key</h2>
+    <input type="password" id="privateKey" class="input-field" placeholder="Enter your private key">
+    <button onclick="validateKey()" class="login-btn">Login</button>
+  </div>
+
+  <script>
+    function validateKey() {
+      const privateKey = document.getElementById('privateKey').value;
+      const validKey = "Mehedi11412"; // এখানে আপনার সঠিক প্রাইভেট কী দিন
+
+      if (privateKey === validKey) {
+        alert("Login Successful!");
+        window.location.href = "https://drive.google.com/drive/folders/1WaE0FP8Z1RgOlheTy5J3WKtdcBWLyn9z"; // সফল হলে এই পেজে রিডাইরেক্ট হবে
+      } else {
+        alert("Invalid Private Key. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
